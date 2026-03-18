@@ -1,0 +1,912 @@
+[
+  {
+    "student_id": "SV001",
+    "student_name": "Nguyễn Văn An",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV002",
+    "student_name": "Trần Thị Bình",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=0)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'KinhDoanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV003",
+    "student_name": "Lê Minh Cường",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(tong_doanh_thu = f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 5,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = tong_doanh_so_quy[tong_doanh_so_quy > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\nprint(f\"DataFrame sau khi tính thành tiền:\\n{df_orders}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['KinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 5,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV004",
+    "student_name": "Phạm Thu Dung",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": null,
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": null,
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] >= 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV005",
+    "student_name": "Hoàng Đức Em",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.argmax(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = (sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0] * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_order = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_order}\")\ndf_order['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_order}\")\ndf_order['ThanhTien'] = df_order['SoLuong'] * df_order['DonGia']\ndf_sorted_orders = df_order.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'KinhDoanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV006",
+    "student_name": "Vũ Quốc Hùng",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=True)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV007",
+    "student_name": "Đặng Thị Giang",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV008",
+    "student_name": "Bùi Thanh Hải",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=0)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\nprint(f\"DataFrame sau khi tính thành tiền:\\n{df_orders}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'KinhDoanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV009",
+    "student_name": "Ngô Thị Hoa",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] >= 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV010",
+    "student_name": "Trịnh Văn Khải",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.argmax(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV011",
+    "student_name": "Lý Thị Lan",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_order = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_order}\")\ndf_order['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_order}\")\ndf_order['ThanhTien'] = df_order['SoLuong'] * df_order['DonGia']\ndf_sorted_orders = df_order.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV012",
+    "student_name": "Phan Thế Minh",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = (sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0] * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV013",
+    "student_name": "Dương Thị Nga",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV014",
+    "student_name": "Tô Quang Oanh",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban + so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) + so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=True)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'KinhDoanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV015",
+    "student_name": "Cao Văn Phúc",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV016",
+    "student_name": "Đinh Thị Quyên",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = tong_doanh_so_quy[tong_doanh_so_quy > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV017",
+    "student_name": "Hồ Anh Sơn",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=0)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV018",
+    "student_name": "Nguyễn Thị Thu",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV019",
+    "student_name": "Trần Đức Uy",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\nprint(f\"DataFrame sau khi tính thành tiền:\\n{df_orders}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] >= 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV020",
+    "student_name": "Lê Thị Vân",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV021",
+    "student_name": "Phạm Văn Xuân",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV022",
+    "student_name": "Vương Thị Yến",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = (sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0] * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=True)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV023",
+    "student_name": "Đỗ Quang Anh",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'KinhDoanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV024",
+    "student_name": "Hoàng Thị Bảo",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.argmax(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=0)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV025",
+    "student_name": "Mai Thành Công",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV026",
+    "student_name": "Lưu Thị Diệu",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": null,
+      "numpy_02": null,
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV027",
+    "student_name": "Nguyễn Văn Đạt",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_order = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_order}\")\ndf_order['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_order}\")\ndf_order['ThanhTien'] = df_order['SoLuong'] * df_order['DonGia']\ndf_sorted_orders = df_order.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] >= 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV028",
+    "student_name": "Trần Thị Hiền",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV029",
+    "student_name": "Phan Quốc Khánh",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = tong_doanh_so_quy[tong_doanh_so_quy > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\nprint(f\"DataFrame sau khi tính thành tiền:\\n{df_orders}\")",
+        "status": 4,
+        "passedTestCases": 0,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  },
+  {
+    "student_id": "SV030",
+    "student_name": "Võ Thị Linh",
+    "class": "CLC11",
+    "submissions": {
+      "numpy_01": {
+        "code": "import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "numpy_02": {
+        "code": "import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_01": {
+        "code": "import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      },
+      "pandas_02": {
+        "code": "import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")",
+        "status": 3,
+        "passedTestCases": 1,
+        "totalTestCases": 1
+      }
+    }
+  }
+]

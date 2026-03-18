@@ -1,0 +1,1401 @@
+[
+  {
+    "student_id": "SV001",
+    "student_name": "Nguyễn Văn An",
+    "average_score": 9.7,
+    "submissions": [
+      {
+        "student_name": "Nguyễn Văn An",
+        "problem_id": "numpy_01",
+        "problem_name": "Numpy 01 – Phân tích lợi nhuận bán hàng",
+        "status": "passed",
+        "score": 9.7,
+        "grade": "A",
+        "passed_tests": 1,
+        "total_tests": 1,
+        "errors": [],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "none",
+            "severity": "none",
+            "title": "Code đúng – không cần sửa",
+            "description": "Không phát hiện lỗi so với reference solution.",
+            "wrong_code": "",
+            "correct_code": "",
+            "explanation": "Code của bạn khớp với yêu cầu bài toán."
+          }
+        ],
+        "feedback": {
+          "score": 9.7,
+          "grade": "A",
+          "overall_comment": "Xuất sắc! Code bài Bài 1: Numpy 01 – Phân tích lợi nhuận bán hàng đạt điểm 9.7/10 (loại A). Cấu trúc code rõ ràng, đúng yêu cầu đề bài. Tiếp tục phát huy!",
+          "strengths": [
+            "Code chạy đúng và vượt qua tất cả test cases",
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution",
+            "Lựa chọn hàm và phương pháp xử lý dữ liệu phù hợp"
+          ],
+          "improvements": [
+            "Tiếp tục duy trì chất lượng code tốt"
+          ],
+          "advice": "Tiếp tục thực hành và giải thêm bài tập nâng cao.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 0 (critical: 0, major: 0, minor: 0)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 1: Numpy 01 – Phân tích lợi nhuận bán hàng\na. Khởi tạo 3 numpy array: gia_ban, chi_phi, so_luong_ban\nb. Tính tong_doanh_thu = gia_ban * so_luong_ban (từng sản phẩm)\nc. Tính tong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban), in format {tong_loi_nhuan*1000:,.0f} VND\nd. Đếm so_san_pham = np.sum(loi_nhuan_moi_sp >= 10000), in số nguyên\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 1/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Không phát hiện lỗi.\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Code đúng – không cần sửa\n    Code sai : \n    Code đúng: \n    Giải thích: Code của bạn khớp với yêu cầu bài toán.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 11,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 11
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 10,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Nguyễn Văn An",
+        "problem_id": "numpy_02",
+        "problem_name": "Numpy 02 – Đánh giá Hiệu suất Kinh doanh",
+        "status": "passed",
+        "score": 9.7,
+        "grade": "A",
+        "passed_tests": 1,
+        "total_tests": 1,
+        "errors": [],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "none",
+            "severity": "none",
+            "title": "Code đúng – không cần sửa",
+            "description": "Không phát hiện lỗi so với reference solution.",
+            "wrong_code": "",
+            "correct_code": "",
+            "explanation": "Code của bạn khớp với yêu cầu bài toán."
+          }
+        ],
+        "feedback": {
+          "score": 9.7,
+          "grade": "A",
+          "overall_comment": "Xuất sắc! Code bài Bài 2: Numpy 02 – Đánh giá Hiệu suất Kinh doanh đạt điểm 9.7/10 (loại A). Cấu trúc code rõ ràng, đúng yêu cầu đề bài. Tiếp tục phát huy!",
+          "strengths": [
+            "Code chạy đúng và vượt qua tất cả test cases",
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution",
+            "Lựa chọn hàm và phương pháp xử lý dữ liệu phù hợp"
+          ],
+          "improvements": [
+            "Tiếp tục duy trì chất lượng code tốt"
+          ],
+          "advice": "Tiếp tục thực hành và giải thêm bài tập nâng cao.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 0 (critical: 0, major: 0, minor: 0)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 2: Numpy 02 – Đánh giá Hiệu suất Kinh doanh\na. trung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nb. tong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nc. quy_vuot_troi = sales_matrix[sales_matrix > 650]\nd. tang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 1/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Không phát hiện lỗi.\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Code đúng – không cần sửa\n    Code sai : \n    Code đúng: \n    Giải thích: Code của bạn khớp với yêu cầu bài toán.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 10,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 10
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 9,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Nguyễn Văn An",
+        "problem_id": "pandas_01",
+        "problem_name": "Pandas 01 – Xử lý Dữ liệu đơn hàng",
+        "status": "passed",
+        "score": 9.7,
+        "grade": "A",
+        "passed_tests": 1,
+        "total_tests": 1,
+        "errors": [],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "none",
+            "severity": "none",
+            "title": "Code đúng – không cần sửa",
+            "description": "Không phát hiện lỗi so với reference solution.",
+            "wrong_code": "",
+            "correct_code": "",
+            "explanation": "Code của bạn khớp với yêu cầu bài toán."
+          }
+        ],
+        "feedback": {
+          "score": 9.7,
+          "grade": "A",
+          "overall_comment": "Xuất sắc! Code bài Bài 3: Pandas 01 – Xử lý Dữ liệu đơn hàng đạt điểm 9.7/10 (loại A). Cấu trúc code rõ ràng, đúng yêu cầu đề bài. Tiếp tục phát huy!",
+          "strengths": [
+            "Code chạy đúng và vượt qua tất cả test cases",
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution",
+            "Lựa chọn hàm và phương pháp xử lý dữ liệu phù hợp"
+          ],
+          "improvements": [
+            "Tiếp tục duy trì chất lượng code tốt"
+          ],
+          "advice": "Tiếp tục thực hành và giải thêm bài tập nâng cao.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 0 (critical: 0, major: 0, minor: 0)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 3: Pandas 01 – Xử lý Dữ liệu đơn hàng\na. Tạo DataFrame df_orders từ dict order_data\nb. df_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nc. Tính df_orders['ThanhTien'] = SoLuong * DonGia, sắp xếp giảm dần theo ThanhTien\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 1/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Không phát hiện lỗi.\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Code đúng – không cần sửa\n    Code sai : \n    Code đúng: \n    Giải thích: Code của bạn khớp với yêu cầu bài toán.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 9,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 9
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 8,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Nguyễn Văn An",
+        "problem_id": "pandas_02",
+        "problem_name": "Pandas 02 – Phân tích dữ liệu nhân sự",
+        "status": "passed",
+        "score": 9.7,
+        "grade": "A",
+        "passed_tests": 1,
+        "total_tests": 1,
+        "errors": [],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "none",
+            "severity": "none",
+            "title": "Code đúng – không cần sửa",
+            "description": "Không phát hiện lỗi so với reference solution.",
+            "wrong_code": "",
+            "correct_code": "",
+            "explanation": "Code của bạn khớp với yêu cầu bài toán."
+          }
+        ],
+        "feedback": {
+          "score": 9.7,
+          "grade": "A",
+          "overall_comment": "Xuất sắc! Code bài Bài 4: Pandas 02 – Phân tích dữ liệu nhân sự đạt điểm 9.7/10 (loại A). Cấu trúc code rõ ràng, đúng yêu cầu đề bài. Tiếp tục phát huy!",
+          "strengths": [
+            "Code chạy đúng và vượt qua tất cả test cases",
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution",
+            "Lựa chọn hàm và phương pháp xử lý dữ liệu phù hợp"
+          ],
+          "improvements": [
+            "Tiếp tục duy trì chất lượng code tốt"
+          ],
+          "advice": "Tiếp tục thực hành và giải thêm bài tập nâng cao.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 0 (critical: 0, major: 0, minor: 0)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 4: Pandas 02 – Phân tích dữ liệu nhân sự\na. Tạo DataFrame df_employees từ employee_data\nb. so_nv_kinh_nghiem = df_employees[NamKinhNghiem > 3].shape[0]\nc. so_nv_luong_cao = df_employees[(PhongBan == 'Kinh doanh') & (LuongThang * 12 > 250)].shape[0]\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 1/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Không phát hiện lỗi.\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Code đúng – không cần sửa\n    Code sai : \n    Code đúng: \n    Giải thích: Code của bạn khớp với yêu cầu bài toán.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 8,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 8
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 7,
+          "matched_count": 0
+        }
+      }
+    ]
+  },
+  {
+    "student_id": "SV002",
+    "student_name": "Trần Thị Bình",
+    "average_score": 4.24,
+    "submissions": [
+      {
+        "student_name": "Trần Thị Bình",
+        "problem_id": "numpy_01",
+        "problem_name": "Numpy 01 – Phân tích lợi nhuận bán hàng",
+        "status": "wrong_answer",
+        "score": 2.7,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 1,
+        "errors": [
+          {
+            "type": "logic",
+            "severity": "minor",
+            "description": "Thiếu nhân 1000 khi in tong_loi_nhuan (đơn vị VND triệu → đồng)",
+            "expected_code": "{tong_loi_nhuan*1000:,.0f}",
+            "actual_code": "{tong_loi_nhuan:,.0f}",
+            "node": {},
+            "ref_node": {},
+            "source": "format_error"
+          }
+        ],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "logic",
+            "severity": "minor",
+            "title": "Thiếu nhân 1000 khi in lợi nhuận (đơn vị: nghìn VNĐ → đồng)",
+            "description": "Thiếu nhân 1000 khi in tong_loi_nhuan (đơn vị VND triệu → đồng)",
+            "wrong_code": "{tong_loi_nhuan:,.0f}",
+            "correct_code": "{tong_loi_nhuan*1000:,.0f}",
+            "explanation": "Dữ liệu lợi nhuận đang tính theo đơn vị nghìn VNĐ. Để chuyển sang VNĐ cần nhân 1000 trước khi in: {tong_loi_nhuan*1000:,.0f}."
+          }
+        ],
+        "feedback": {
+          "score": 2.7,
+          "grade": "F",
+          "overall_comment": "Cần cải thiện nhiều. Code bài Bài 1: Numpy 01 – Phân tích lợi nhuận bán hàng đạt điểm 2.7/10 (loại F). Có 0 lỗi nghiêm trọng và 0 lỗi lớn. Đề nghị xem lại kiến thức cơ bản và tham khảo reference solution.",
+          "strengths": [
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution",
+            "Lựa chọn hàm và phương pháp xử lý dữ liệu phù hợp"
+          ],
+          "improvements": [
+            "Chú ý chi tiết nhỏ: Thiếu nhân 1000 khi in tong_loi_nhuan (đơn vị VND triệu → đồng)"
+          ],
+          "advice": "Tham khảo hướng dẫn sửa lỗi ở trên và thực hành lại. Đọc kỹ tài liệu NumPy/Pandas về các tham số như axis, ascending.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 1 (critical: 0, major: 0, minor: 1)\n\nCác lỗi phát hiện:\n  1. [MINOR] Thiếu nhân 1000 khi in tong_loi_nhuan (đơn vị VND triệu → đồng)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 1: Numpy 01 – Phân tích lợi nhuận bán hàng\na. Khởi tạo 3 numpy array: gia_ban, chi_phi, so_luong_ban\nb. Tính tong_doanh_thu = gia_ban * so_luong_ban (từng sản phẩm)\nc. Tính tong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban), in format {tong_loi_nhuan*1000:,.0f} VND\nd. Đếm so_san_pham = np.sum(loi_nhuan_moi_sp >= 10000), in số nguyên\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 0/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Lỗi 1: [MINOR] logic – Thiếu nhân 1000 khi in tong_loi_nhuan (đơn vị VND triệu → đồng)\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Thiếu nhân 1000 khi in lợi nhuận (đơn vị: nghìn VNĐ → đồng)\n    Code sai : {tong_loi_nhuan:,.0f}\n    Code đúng: {tong_loi_nhuan*1000:,.0f}\n    Giải thích: Dữ liệu lợi nhuận đang tính theo đơn vị nghìn VNĐ. Để chuyển sang VNĐ cần nhân 1000 trước khi in: {tong_loi_nhuan*1000:,.0f}.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 11,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 11
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 10,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Trần Thị Bình",
+        "problem_id": "numpy_02",
+        "problem_name": "Numpy 02 – Đánh giá Hiệu suất Kinh doanh",
+        "status": "wrong_answer",
+        "score": 2.27,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 1,
+        "errors": [
+          {
+            "type": "logic",
+            "severity": "major",
+            "description": "Dùng axis=0 thay vì axis=1",
+            "expected_code": "axis=1",
+            "actual_code": "axis=0",
+            "node": {
+              "id": "n3",
+              "type": "numpy_reduction",
+              "label": "trung_binh_khu_vuc = np.mean(sales_matrix, axis=0)",
+              "operation": "np.mean(sales_matrix, axis=0)",
+              "target_var": "trung_binh_khu_vuc",
+              "source_vars": [
+                "sales_matrix"
+              ],
+              "line": 3,
+              "extra": {
+                "func": "np.mean",
+                "args": [
+                  "sales_matrix"
+                ],
+                "kwargs": {
+                  "axis": 0
+                }
+              }
+            },
+            "ref_node": {
+              "id": "n3",
+              "type": "numpy_reduction",
+              "label": "trung_binh_khu_vuc = np.mean(sales_matrix, axis=1)",
+              "operation": "np.mean(sales_matrix, axis=1)",
+              "target_var": "trung_binh_khu_vuc",
+              "source_vars": [
+                "sales_matrix"
+              ],
+              "line": 10,
+              "extra": {
+                "func": "np.mean",
+                "args": [
+                  "sales_matrix"
+                ],
+                "kwargs": {
+                  "axis": 1
+                }
+              }
+            },
+            "source": "wrong_axis"
+          }
+        ],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "logic",
+            "severity": "major",
+            "title": "Sai tham số axis – dùng axis=0 thay vì axis=1",
+            "description": "Dùng axis=0 thay vì axis=1",
+            "wrong_code": "trung_binh_khu_vuc = np.mean(sales_matrix, axis=0)",
+            "correct_code": "trung_binh_khu_vuc = np.mean(sales_matrix, axis=1)",
+            "explanation": "axis=0 tính theo chiều dọc (theo cột), cho kết quả là mảng 1 chiều theo cột. axis=1 tính theo chiều ngang (theo hàng), cho kết quả là mảng 1 chiều theo hàng. Khi cần tính trung bình/tổng theo từng khu vực (hàng), phải dùng axis=1."
+          }
+        ],
+        "feedback": {
+          "score": 2.27,
+          "grade": "F",
+          "overall_comment": "Cần cải thiện nhiều. Code bài Bài 2: Numpy 02 – Đánh giá Hiệu suất Kinh doanh đạt điểm 2.27/10 (loại F). Có 0 lỗi nghiêm trọng và 1 lỗi lớn. Đề nghị xem lại kiến thức cơ bản và tham khảo reference solution.",
+          "strengths": [
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution",
+            "Lựa chọn hàm và phương pháp xử lý dữ liệu phù hợp"
+          ],
+          "improvements": [
+            "Kiểm tra lại tham số: Dùng axis=0 thay vì axis=1"
+          ],
+          "advice": "Tham khảo hướng dẫn sửa lỗi ở trên và thực hành lại. Đọc kỹ tài liệu NumPy/Pandas về các tham số như axis, ascending.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 88.9%\nSố lỗi: 1 (critical: 0, major: 1, minor: 0)\n\nCác lỗi phát hiện:\n  1. [MAJOR] Dùng axis=0 thay vì axis=1",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 2: Numpy 02 – Đánh giá Hiệu suất Kinh doanh\na. trung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nb. tong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nc. quy_vuot_troi = sales_matrix[sales_matrix > 650]\nd. tang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=0)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 0/1\n        - Độ tương đồng graph ngữ nghĩa: 88.9%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Lỗi 1: [MAJOR] logic – Dùng axis=0 thay vì axis=1\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Sai tham số axis – dùng axis=0 thay vì axis=1\n    Code sai : trung_binh_khu_vuc = np.mean(sales_matrix, axis=0)\n    Code đúng: trung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\n    Giải thích: axis=0 tính theo chiều dọc (theo cột), cho kết quả là mảng 1 chiều theo cột. axis=1 tính theo chiều ngang (theo hàng), cho kết quả là mảng 1 chiều theo hàng. Khi cần tính trung bình/tổng theo từng khu vực (hàng), phải dùng axis=1.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 10,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 10
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.8889,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 9,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Trần Thị Bình",
+        "problem_id": "pandas_01",
+        "problem_name": "Pandas 01 – Xử lý Dữ liệu đơn hàng",
+        "status": "passed",
+        "score": 9.7,
+        "grade": "A",
+        "passed_tests": 1,
+        "total_tests": 1,
+        "errors": [],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "none",
+            "severity": "none",
+            "title": "Code đúng – không cần sửa",
+            "description": "Không phát hiện lỗi so với reference solution.",
+            "wrong_code": "",
+            "correct_code": "",
+            "explanation": "Code của bạn khớp với yêu cầu bài toán."
+          }
+        ],
+        "feedback": {
+          "score": 9.7,
+          "grade": "A",
+          "overall_comment": "Xuất sắc! Code bài Bài 3: Pandas 01 – Xử lý Dữ liệu đơn hàng đạt điểm 9.7/10 (loại A). Cấu trúc code rõ ràng, đúng yêu cầu đề bài. Tiếp tục phát huy!",
+          "strengths": [
+            "Code chạy đúng và vượt qua tất cả test cases",
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution",
+            "Lựa chọn hàm và phương pháp xử lý dữ liệu phù hợp"
+          ],
+          "improvements": [
+            "Tiếp tục duy trì chất lượng code tốt"
+          ],
+          "advice": "Tiếp tục thực hành và giải thêm bài tập nâng cao.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 0 (critical: 0, major: 0, minor: 0)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 3: Pandas 01 – Xử lý Dữ liệu đơn hàng\na. Tạo DataFrame df_orders từ dict order_data\nb. df_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nc. Tính df_orders['ThanhTien'] = SoLuong * DonGia, sắp xếp giảm dần theo ThanhTien\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\ndf_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 1/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Không phát hiện lỗi.\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Code đúng – không cần sửa\n    Code sai : \n    Code đúng: \n    Giải thích: Code của bạn khớp với yêu cầu bài toán.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 9,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 9
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 8,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Trần Thị Bình",
+        "problem_id": "pandas_02",
+        "problem_name": "Pandas 02 – Phân tích dữ liệu nhân sự",
+        "status": "wrong_answer",
+        "score": 2.29,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 1,
+        "errors": [
+          {
+            "type": "data_handling",
+            "severity": "major",
+            "description": "Sai tên phòng ban: 'KinhDoanh' cần phải là 'Kinh doanh' (có dấu cách và dấu thanh)",
+            "expected_code": "df_employees['PhongBan'] == 'Kinh doanh'",
+            "actual_code": "df_employees['PhongBan'] == 'KinhDoanh'",
+            "node": {},
+            "ref_node": {},
+            "source": "wrong_column_value"
+          }
+        ],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "data_handling",
+            "severity": "major",
+            "title": "Sai tên phòng ban – 'KinhDoanh' thay vì 'Kinh doanh'",
+            "description": "Sai tên phòng ban: 'KinhDoanh' cần phải là 'Kinh doanh' (có dấu cách và dấu thanh)",
+            "wrong_code": "df_employees['PhongBan'] == 'KinhDoanh'",
+            "correct_code": "df_employees['PhongBan'] == 'Kinh doanh'",
+            "explanation": "Tên phòng ban trong DataFrame là 'Kinh doanh' (có dấu cách và dấu tiếng Việt). Dùng 'KinhDoanh' sẽ không khớp với dữ liệu, kết quả lọc sẽ trả về 0 hàng."
+          }
+        ],
+        "feedback": {
+          "score": 2.29,
+          "grade": "F",
+          "overall_comment": "Cần cải thiện nhiều. Code bài Bài 4: Pandas 02 – Phân tích dữ liệu nhân sự đạt điểm 2.29/10 (loại F). Có 0 lỗi nghiêm trọng và 1 lỗi lớn. Đề nghị xem lại kiến thức cơ bản và tham khảo reference solution.",
+          "strengths": [
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution"
+          ],
+          "improvements": [
+            "Xem lại cách xử lý dữ liệu: Sai tên phòng ban: 'KinhDoanh' cần phải là 'Kinh doanh' (có dấu cách và dấu thanh)"
+          ],
+          "advice": "Tham khảo hướng dẫn sửa lỗi ở trên và thực hành lại.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 1 (critical: 0, major: 1, minor: 0)\n\nCác lỗi phát hiện:\n  1. [MAJOR] Sai tên phòng ban: 'KinhDoanh' cần phải là 'Kinh doanh' (có dấu cách và dấu thanh)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 4: Pandas 02 – Phân tích dữ liệu nhân sự\na. Tạo DataFrame df_employees từ employee_data\nb. so_nv_kinh_nghiem = df_employees[NamKinhNghiem > 3].shape[0]\nc. so_nv_luong_cao = df_employees[(PhongBan == 'Kinh doanh') & (LuongThang * 12 > 250)].shape[0]\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'KinhDoanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 0/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Lỗi 1: [MAJOR] data_handling – Sai tên phòng ban: 'KinhDoanh' cần phải là 'Kinh doanh' (có dấu cách và dấu thanh)\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Sai tên phòng ban – 'KinhDoanh' thay vì 'Kinh doanh'\n    Code sai : df_employees['PhongBan'] == 'KinhDoanh'\n    Code đúng: df_employees['PhongBan'] == 'Kinh doanh'\n    Giải thích: Tên phòng ban trong DataFrame là 'Kinh doanh' (có dấu cách và dấu tiếng Việt). Dùng 'KinhDoanh' sẽ không khớp với dữ liệu, kết quả lọc sẽ trả về 0 hàng.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 8,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 8
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 7,
+          "matched_count": 0
+        }
+      }
+    ]
+  },
+  {
+    "student_id": "SV003",
+    "student_name": "Lê Minh Cường",
+    "average_score": 1.93,
+    "submissions": [
+      {
+        "student_name": "Lê Minh Cường",
+        "problem_id": "numpy_01",
+        "problem_name": "Numpy 01 – Phân tích lợi nhuận bán hàng",
+        "status": "runtime_error",
+        "score": 2.7,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 1,
+        "errors": [],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "none",
+            "severity": "none",
+            "title": "Code đúng – không cần sửa",
+            "description": "Không phát hiện lỗi so với reference solution.",
+            "wrong_code": "",
+            "correct_code": "",
+            "explanation": "Code của bạn khớp với yêu cầu bài toán."
+          }
+        ],
+        "feedback": {
+          "score": 2.7,
+          "grade": "F",
+          "overall_comment": "Cần cải thiện nhiều. Code bài Bài 1: Numpy 01 – Phân tích lợi nhuận bán hàng đạt điểm 2.7/10 (loại F). Có 0 lỗi nghiêm trọng và 0 lỗi lớn. Đề nghị xem lại kiến thức cơ bản và tham khảo reference solution.",
+          "strengths": [
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution",
+            "Lựa chọn hàm và phương pháp xử lý dữ liệu phù hợp"
+          ],
+          "improvements": [
+            "Tiếp tục duy trì chất lượng code tốt"
+          ],
+          "advice": "Tiếp tục thực hành và giải thêm bài tập nâng cao.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 0 (critical: 0, major: 0, minor: 0)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 1: Numpy 01 – Phân tích lợi nhuận bán hàng\na. Khởi tạo 3 numpy array: gia_ban, chi_phi, so_luong_ban\nb. Tính tong_doanh_thu = gia_ban * so_luong_ban (từng sản phẩm)\nc. Tính tong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban), in format {tong_loi_nhuan*1000:,.0f} VND\nd. Đếm so_san_pham = np.sum(loi_nhuan_moi_sp >= 10000), in số nguyên\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(tong_doanh_thu = f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 0/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Không phát hiện lỗi.\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Code đúng – không cần sửa\n    Code sai : \n    Code đúng: \n    Giải thích: Code của bạn khớp với yêu cầu bài toán.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 11,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 11
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 10,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Lê Minh Cường",
+        "problem_id": "numpy_02",
+        "problem_name": "Numpy 02 – Đánh giá Hiệu suất Kinh doanh",
+        "status": "wrong_answer",
+        "score": 2.21,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 1,
+        "errors": [
+          {
+            "type": "algorithm",
+            "severity": "major",
+            "description": "Dùng 'tong_doanh_so_quy[tong_doanh_so_quy > 650]' thay vì 'sales_matrix[sales_matrix > 650]'",
+            "expected_code": "sales_matrix[sales_matrix > 650](...)",
+            "actual_code": "tong_doanh_so_quy[tong_doanh_so_quy > 650](...)",
+            "node": {
+              "id": "n7",
+              "type": "boolean_indexing",
+              "label": "quy_vuot_troi = tong_doanh_so_quy[tong_doanh_so_quy > 650]",
+              "operation": "tong_doanh_so_quy[tong_doanh_so_quy > 650]",
+              "target_var": "quy_vuot_troi",
+              "source_vars": [
+                "tong_doanh_so_quy",
+                "tong_doanh_so_quy"
+              ],
+              "line": 7,
+              "extra": {
+                "filter": "tong_doanh_so_quy > 650",
+                "filter_raw": "tong_doanh_so_quy > 650",
+                "filter_extra": {
+                  "op": ">",
+                  "left": "tong_doanh_so_quy",
+                  "right": "650"
+                }
+              }
+            },
+            "ref_node": {
+              "id": "n7",
+              "type": "boolean_indexing",
+              "label": "quy_vuot_troi = sales_matrix[sales_matrix > 650]",
+              "operation": "sales_matrix[sales_matrix > 650]",
+              "target_var": "quy_vuot_troi",
+              "source_vars": [
+                "sales_matrix",
+                "sales_matrix"
+              ],
+              "line": 16,
+              "extra": {
+                "filter": "sales_matrix > 650",
+                "filter_raw": "sales_matrix > 650",
+                "filter_extra": {
+                  "op": ">",
+                  "left": "sales_matrix",
+                  "right": "650"
+                }
+              }
+            },
+            "source": "wrong_function"
+          }
+        ],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "algorithm",
+            "severity": "major",
+            "title": "Lỗi cần sửa",
+            "description": "Dùng 'tong_doanh_so_quy[tong_doanh_so_quy > 650]' thay vì 'sales_matrix[sales_matrix > 650]'",
+            "wrong_code": "quy_vuot_troi = tong_doanh_so_quy[tong_doanh_so_quy > 650]",
+            "correct_code": "quy_vuot_troi = sales_matrix[sales_matrix > 650]",
+            "explanation": "Kiểm tra lại đoạn code này theo hướng dẫn."
+          }
+        ],
+        "feedback": {
+          "score": 2.21,
+          "grade": "F",
+          "overall_comment": "Cần cải thiện nhiều. Code bài Bài 2: Numpy 02 – Đánh giá Hiệu suất Kinh doanh đạt điểm 2.21/10 (loại F). Có 0 lỗi nghiêm trọng và 1 lỗi lớn. Đề nghị xem lại kiến thức cơ bản và tham khảo reference solution.",
+          "strengths": [
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution"
+          ],
+          "improvements": [
+            "Xem lại việc chọn hàm: Dùng 'tong_doanh_so_quy[tong_doanh_so_quy > 650]' thay vì 'sales_matrix[sales_matrix > 650]'"
+          ],
+          "advice": "Tham khảo hướng dẫn sửa lỗi ở trên và thực hành lại. Nắm vững sự khác biệt giữa các hàm: sum/argmax, mean/sum, v.v.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 86.7%\nSố lỗi: 1 (critical: 0, major: 1, minor: 0)\n\nCác lỗi phát hiện:\n  1. [MAJOR] Dùng 'tong_doanh_so_quy[tong_doanh_so_quy > 650]' thay vì 'sales_matrix[sales_matrix > 650]'",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 2: Numpy 02 – Đánh giá Hiệu suất Kinh doanh\na. trung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nb. tong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nc. quy_vuot_troi = sales_matrix[sales_matrix > 650]\nd. tang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = tong_doanh_so_quy[tong_doanh_so_quy > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 0/1\n        - Độ tương đồng graph ngữ nghĩa: 86.7%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Lỗi 1: [MAJOR] algorithm – Dùng 'tong_doanh_so_quy[tong_doanh_so_quy > 650]' thay vì 'sales_matrix[sales_matrix > 650]'\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Lỗi cần sửa\n    Code sai : quy_vuot_troi = tong_doanh_so_quy[tong_doanh_so_quy > 650]\n    Code đúng: quy_vuot_troi = sales_matrix[sales_matrix > 650]\n    Giải thích: Kiểm tra lại đoạn code này theo hướng dẫn.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 10,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 10
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.8667,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 9,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Lê Minh Cường",
+        "problem_id": "pandas_01",
+        "problem_name": "Pandas 01 – Xử lý Dữ liệu đơn hàng",
+        "status": "wrong_answer",
+        "score": 2.01,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 1,
+        "errors": [
+          {
+            "type": "logic",
+            "severity": "major",
+            "description": "Thiếu bước sắp xếp DataFrame (sort_values)",
+            "node": {
+              "id": "n8",
+              "type": "pandas_sort",
+              "label": "df_sorted_orders = df_orders.sort_values(by=ThanhTien, ascending=False)",
+              "operation": "df_orders.sort_values(by=ThanhTien, ascending=False)",
+              "target_var": "df_sorted_orders",
+              "source_vars": [],
+              "line": 17,
+              "extra": {
+                "func": "df_orders.sort_values",
+                "args": [],
+                "kwargs": {
+                  "by": "ThanhTien",
+                  "ascending": false
+                }
+              }
+            },
+            "source": "missing_node"
+          }
+        ],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "logic",
+            "severity": "major",
+            "title": "Thiếu bước sắp xếp DataFrame",
+            "description": "Thiếu bước sắp xếp DataFrame (sort_values)",
+            "wrong_code": "(xem code của bạn)",
+            "correct_code": "(xem reference solution)",
+            "explanation": "Bài yêu cầu sắp xếp DataFrame theo cột ThanhTien giảm dần. Cần gọi df_orders.sort_values(by='ThanhTien', ascending=False) để tạo DataFrame đã được sắp xếp."
+          }
+        ],
+        "feedback": {
+          "score": 2.01,
+          "grade": "F",
+          "overall_comment": "Cần cải thiện nhiều. Code bài Bài 3: Pandas 01 – Xử lý Dữ liệu đơn hàng đạt điểm 2.01/10 (loại F). Có 0 lỗi nghiêm trọng và 1 lỗi lớn. Đề nghị xem lại kiến thức cơ bản và tham khảo reference solution.",
+          "strengths": [
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Đã thực hiện được phần lớn các bước yêu cầu",
+            "Lựa chọn hàm và phương pháp xử lý dữ liệu phù hợp"
+          ],
+          "improvements": [
+            "Kiểm tra lại tham số: Thiếu bước sắp xếp DataFrame (sort_values)"
+          ],
+          "advice": "Tham khảo hướng dẫn sửa lỗi ở trên và thực hành lại. Đọc kỹ tài liệu NumPy/Pandas về các tham số như axis, ascending.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 78.8%\nSố lỗi: 1 (critical: 0, major: 1, minor: 0)\n\nCác lỗi phát hiện:\n  1. [MAJOR] Thiếu bước sắp xếp DataFrame (sort_values)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 3: Pandas 01 – Xử lý Dữ liệu đơn hàng\na. Tạo DataFrame df_orders từ dict order_data\nb. df_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nc. Tính df_orders['ThanhTien'] = SoLuong * DonGia, sắp xếp giảm dần theo ThanhTien\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_orders = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_orders}\")\ndf_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_orders}\")\ndf_orders['ThanhTien'] = df_orders['SoLuong'] * df_orders['DonGia']\nprint(f\"DataFrame sau khi tính thành tiền:\\n{df_orders}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 0/1\n        - Độ tương đồng graph ngữ nghĩa: 78.8%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Lỗi 1: [MAJOR] logic – Thiếu bước sắp xếp DataFrame (sort_values)\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Thiếu bước sắp xếp DataFrame\n    Code sai : (xem code của bạn)\n    Code đúng: (xem reference solution)\n    Giải thích: Bài yêu cầu sắp xếp DataFrame theo cột ThanhTien giảm dần. Cần gọi df_orders.sort_values(by='ThanhTien', ascending=False) để tạo DataFrame đã được sắp xếp.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 8,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 9
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.7875,
+          "missing_count": 1,
+          "extra_count": 0,
+          "wrong_count": 7,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Lê Minh Cường",
+        "problem_id": "pandas_02",
+        "problem_name": "Pandas 02 – Phân tích dữ liệu nhân sự",
+        "status": "runtime_error",
+        "score": 0.81,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 1,
+        "errors": [
+          {
+            "type": "data_handling",
+            "severity": "major",
+            "description": "Sai tên cột: 'KinhNghiem' nên là 'NamKinhNghiem'",
+            "expected_code": "NamKinhNghiem",
+            "actual_code": "KinhNghiem",
+            "node": {
+              "id": "n5",
+              "type": "shape_access",
+              "label": "so_nv_kinh_nghiem = (df_employees[df_employees[KinhNghiem] > 3]).shape[0]",
+              "operation": "(df_employees[df_employees[KinhNghiem] > 3]).shape[0]",
+              "target_var": "so_nv_kinh_nghiem",
+              "source_vars": [
+                "df_employees",
+                "df_employees"
+              ],
+              "line": 5,
+              "extra": {
+                "filter": "df_employees[KinhNghiem] > 3",
+                "filter_raw": "df_employees['KinhNghiem'] > 3",
+                "shape_index": 0
+              }
+            },
+            "ref_node": {
+              "id": "n5",
+              "type": "shape_access",
+              "label": "so_nv_kinh_nghiem = (df_employees[df_employees[NamKinhNghiem] > 3]).shape[0]",
+              "operation": "(df_employees[df_employees[NamKinhNghiem] > 3]).shape[0]",
+              "target_var": "so_nv_kinh_nghiem",
+              "source_vars": [
+                "df_employees",
+                "df_employees"
+              ],
+              "line": 13,
+              "extra": {
+                "filter": "df_employees[NamKinhNghiem] > 3",
+                "filter_raw": "df_employees['NamKinhNghiem'] > 3",
+                "shape_index": 0
+              }
+            },
+            "source": "wrong_column_value"
+          },
+          {
+            "type": "data_handling",
+            "severity": "critical",
+            "description": "Sai tên cột: 'KinhNghiem' không tồn tại, cần dùng 'NamKinhNghiem'",
+            "expected_code": "df_employees['NamKinhNghiem']",
+            "actual_code": "df_employees['KinhNghiem']",
+            "node": {},
+            "ref_node": {},
+            "source": "wrong_column_value"
+          }
+        ],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "data_handling",
+            "severity": "critical",
+            "title": "Sai tên cột – 'KinhNghiem' thay vì 'NamKinhNghiem'",
+            "description": "Sai tên cột: 'KinhNghiem' không tồn tại, cần dùng 'NamKinhNghiem'",
+            "wrong_code": "df_employees['KinhNghiem']",
+            "correct_code": "df_employees['NamKinhNghiem']",
+            "explanation": "Tên cột trong DataFrame là 'NamKinhNghiem'. Truy cập cột không tồn tại sẽ gây ra KeyError khi chạy code."
+          },
+          {
+            "step_number": 2,
+            "error_type": "data_handling",
+            "severity": "major",
+            "title": "Sai tên cột – 'KinhNghiem' thay vì 'NamKinhNghiem'",
+            "description": "Sai tên cột: 'KinhNghiem' nên là 'NamKinhNghiem'",
+            "wrong_code": "so_nv_kinh_nghiem = df_employees[df_employees['KinhNghiem'] > 3].shape[0]",
+            "correct_code": "so_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]",
+            "explanation": "Tên cột trong DataFrame là 'NamKinhNghiem'. Truy cập cột không tồn tại sẽ gây ra KeyError khi chạy code."
+          }
+        ],
+        "feedback": {
+          "score": 0.81,
+          "grade": "F",
+          "overall_comment": "Cần cải thiện nhiều. Code bài Bài 4: Pandas 02 – Phân tích dữ liệu nhân sự đạt điểm 0.81/10 (loại F). Có 1 lỗi nghiêm trọng và 1 lỗi lớn. Đề nghị xem lại kiến thức cơ bản và tham khảo reference solution.",
+          "strengths": [
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution"
+          ],
+          "improvements": [
+            "Xem lại cách xử lý dữ liệu: Sai tên cột: 'KinhNghiem' nên là 'NamKinhNghiem'",
+            "Xem lại cách xử lý dữ liệu: Sai tên cột: 'KinhNghiem' không tồn tại, cần dùng 'NamKinhNghiem'"
+          ],
+          "advice": "Tham khảo hướng dẫn sửa lỗi ở trên và thực hành lại.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 2 (critical: 1, major: 1, minor: 0)\n\nCác lỗi phát hiện:\n  1. [MAJOR] Sai tên cột: 'KinhNghiem' nên là 'NamKinhNghiem'\n  2. [CRITICAL] Sai tên cột: 'KinhNghiem' không tồn tại, cần dùng 'NamKinhNghiem'",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 4: Pandas 02 – Phân tích dữ liệu nhân sự\na. Tạo DataFrame df_employees từ employee_data\nb. so_nv_kinh_nghiem = df_employees[NamKinhNghiem > 3].shape[0]\nc. so_nv_luong_cao = df_employees[(PhongBan == 'Kinh doanh') & (LuongThang * 12 > 250)].shape[0]\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['KinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 0/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Lỗi 1: [MAJOR] data_handling – Sai tên cột: 'KinhNghiem' nên là 'NamKinhNghiem'\n  Lỗi 2: [CRITICAL] data_handling – Sai tên cột: 'KinhNghiem' không tồn tại, cần dùng 'NamKinhNghiem'\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Sai tên cột – 'KinhNghiem' thay vì 'NamKinhNghiem'\n    Code sai : df_employees['KinhNghiem']\n    Code đúng: df_employees['NamKinhNghiem']\n    Giải thích: Tên cột trong DataFrame là 'NamKinhNghiem'. Truy cập cột không tồn tại sẽ gây ra KeyError khi chạy code.\n\n  Bước 2: Sai tên cột – 'KinhNghiem' thay vì 'NamKinhNghiem'\n    Code sai : so_nv_kinh_nghiem = df_employees[df_employees['KinhNghiem'] > 3].shape[0]\n    Code đúng: so_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\n    Giải thích: Tên cột trong DataFrame là 'NamKinhNghiem'. Truy cập cột không tồn tại sẽ gây ra KeyError khi chạy code.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 8,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 8
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 7,
+          "matched_count": 0
+        }
+      }
+    ]
+  },
+  {
+    "student_id": "SV004",
+    "student_name": "Phạm Thu Dung",
+    "average_score": 3.0,
+    "submissions": [
+      {
+        "student_name": "Phạm Thu Dung",
+        "problem_id": "numpy_01",
+        "problem_name": "Numpy 01 – Phân tích lợi nhuận bán hàng",
+        "status": "not_submitted",
+        "score": 0.0,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 0,
+        "errors": [],
+        "repair_steps": [],
+        "feedback": {
+          "score": 0.0,
+          "grade": "F",
+          "overall_comment": "Sinh viên chưa nộp bài Numpy 01 – Phân tích lợi nhuận bán hàng.",
+          "strengths": [],
+          "improvements": [
+            "Cần nộp bài để được chấm điểm"
+          ],
+          "advice": "Hoàn thành và nộp bài đúng hạn.",
+          "feedback_detail": "Không có bài nộp.",
+          "llm_prompt": ""
+        },
+        "graph": {
+          "student": {},
+          "reference": {}
+        },
+        "graph_diff": {}
+      },
+      {
+        "student_name": "Phạm Thu Dung",
+        "problem_id": "numpy_02",
+        "problem_name": "Numpy 02 – Đánh giá Hiệu suất Kinh doanh",
+        "status": "passed",
+        "score": 9.7,
+        "grade": "A",
+        "passed_tests": 1,
+        "total_tests": 1,
+        "errors": [],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "none",
+            "severity": "none",
+            "title": "Code đúng – không cần sửa",
+            "description": "Không phát hiện lỗi so với reference solution.",
+            "wrong_code": "",
+            "correct_code": "",
+            "explanation": "Code của bạn khớp với yêu cầu bài toán."
+          }
+        ],
+        "feedback": {
+          "score": 9.7,
+          "grade": "A",
+          "overall_comment": "Xuất sắc! Code bài Bài 2: Numpy 02 – Đánh giá Hiệu suất Kinh doanh đạt điểm 9.7/10 (loại A). Cấu trúc code rõ ràng, đúng yêu cầu đề bài. Tiếp tục phát huy!",
+          "strengths": [
+            "Code chạy đúng và vượt qua tất cả test cases",
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution",
+            "Lựa chọn hàm và phương pháp xử lý dữ liệu phù hợp"
+          ],
+          "improvements": [
+            "Tiếp tục duy trì chất lượng code tốt"
+          ],
+          "advice": "Tiếp tục thực hành và giải thêm bài tập nâng cao.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 0 (critical: 0, major: 0, minor: 0)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 2: Numpy 02 – Đánh giá Hiệu suất Kinh doanh\na. trung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nb. tong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nc. quy_vuot_troi = sales_matrix[sales_matrix > 650]\nd. tang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 1/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Không phát hiện lỗi.\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Code đúng – không cần sửa\n    Code sai : \n    Code đúng: \n    Giải thích: Code của bạn khớp với yêu cầu bài toán.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 10,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 10
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 9,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Phạm Thu Dung",
+        "problem_id": "pandas_01",
+        "problem_name": "Pandas 01 – Xử lý Dữ liệu đơn hàng",
+        "status": "not_submitted",
+        "score": 0.0,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 0,
+        "errors": [],
+        "repair_steps": [],
+        "feedback": {
+          "score": 0.0,
+          "grade": "F",
+          "overall_comment": "Sinh viên chưa nộp bài Pandas 01 – Xử lý Dữ liệu đơn hàng.",
+          "strengths": [],
+          "improvements": [
+            "Cần nộp bài để được chấm điểm"
+          ],
+          "advice": "Hoàn thành và nộp bài đúng hạn.",
+          "feedback_detail": "Không có bài nộp.",
+          "llm_prompt": ""
+        },
+        "graph": {
+          "student": {},
+          "reference": {}
+        },
+        "graph_diff": {}
+      },
+      {
+        "student_name": "Phạm Thu Dung",
+        "problem_id": "pandas_02",
+        "problem_name": "Pandas 02 – Phân tích dữ liệu nhân sự",
+        "status": "wrong_answer",
+        "score": 2.29,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 1,
+        "errors": [
+          {
+            "type": "logic",
+            "severity": "major",
+            "description": "Sai điều kiện: dùng >= 3 thay vì > 3 (bài yêu cầu HƠN 3 năm kinh nghiệm)",
+            "expected_code": "df_employees['NamKinhNghiem'] > 3",
+            "actual_code": "df_employees['NamKinhNghiem'] >= 3",
+            "node": {},
+            "ref_node": {},
+            "source": "wrong_filter"
+          }
+        ],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "logic",
+            "severity": "major",
+            "title": "Sai điều kiện – dùng >= 3 thay vì > 3",
+            "description": "Sai điều kiện: dùng >= 3 thay vì > 3 (bài yêu cầu HƠN 3 năm kinh nghiệm)",
+            "wrong_code": "df_employees['NamKinhNghiem'] >= 3",
+            "correct_code": "df_employees['NamKinhNghiem'] > 3",
+            "explanation": "Bài yêu cầu đếm nhân viên có HƠN 3 năm kinh nghiệm (strictly greater than). Dùng >= 3 sẽ bao gồm cả nhân viên có đúng 3 năm kinh nghiệm, cho kết quả sai."
+          }
+        ],
+        "feedback": {
+          "score": 2.29,
+          "grade": "F",
+          "overall_comment": "Cần cải thiện nhiều. Code bài Bài 4: Pandas 02 – Phân tích dữ liệu nhân sự đạt điểm 2.29/10 (loại F). Có 0 lỗi nghiêm trọng và 1 lỗi lớn. Đề nghị xem lại kiến thức cơ bản và tham khảo reference solution.",
+          "strengths": [
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution",
+            "Lựa chọn hàm và phương pháp xử lý dữ liệu phù hợp"
+          ],
+          "improvements": [
+            "Kiểm tra lại tham số: Sai điều kiện: dùng >= 3 thay vì > 3 (bài yêu cầu HƠN 3 năm kinh nghiệm)"
+          ],
+          "advice": "Tham khảo hướng dẫn sửa lỗi ở trên và thực hành lại. Đọc kỹ tài liệu NumPy/Pandas về các tham số như axis, ascending.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 1 (critical: 0, major: 1, minor: 0)\n\nCác lỗi phát hiện:\n  1. [MAJOR] Sai điều kiện: dùng >= 3 thay vì > 3 (bài yêu cầu HƠN 3 năm kinh nghiệm)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 4: Pandas 02 – Phân tích dữ liệu nhân sự\na. Tạo DataFrame df_employees từ employee_data\nb. so_nv_kinh_nghiem = df_employees[NamKinhNghiem > 3].shape[0]\nc. so_nv_luong_cao = df_employees[(PhongBan == 'Kinh doanh') & (LuongThang * 12 > 250)].shape[0]\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] >= 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'Kinh doanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 0/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Lỗi 1: [MAJOR] logic – Sai điều kiện: dùng >= 3 thay vì > 3 (bài yêu cầu HƠN 3 năm kinh nghiệm)\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Sai điều kiện – dùng >= 3 thay vì > 3\n    Code sai : df_employees['NamKinhNghiem'] >= 3\n    Code đúng: df_employees['NamKinhNghiem'] > 3\n    Giải thích: Bài yêu cầu đếm nhân viên có HƠN 3 năm kinh nghiệm (strictly greater than). Dùng >= 3 sẽ bao gồm cả nhân viên có đúng 3 năm kinh nghiệm, cho kết quả sai.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 8,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 8
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 7,
+          "matched_count": 0
+        }
+      }
+    ]
+  },
+  {
+    "student_id": "SV005",
+    "student_name": "Hoàng Đức Em",
+    "average_score": 2.36,
+    "submissions": [
+      {
+        "student_name": "Hoàng Đức Em",
+        "problem_id": "numpy_01",
+        "problem_name": "Numpy 01 – Phân tích lợi nhuận bán hàng",
+        "status": "wrong_answer",
+        "score": 2.24,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 1,
+        "errors": [
+          {
+            "type": "algorithm",
+            "severity": "major",
+            "description": "Dùng 'argmax' thay vì 'sum'",
+            "expected_code": "sum(...)",
+            "actual_code": "argmax(...)",
+            "node": {
+              "id": "n10",
+              "type": "numpy_reduction",
+              "label": "so_san_pham = np.argmax(loi_nhuan_moi_sp >= 10000)",
+              "operation": "np.argmax(loi_nhuan_moi_sp >= 10000)",
+              "target_var": "so_san_pham",
+              "source_vars": [],
+              "line": 10,
+              "extra": {
+                "func": "np.argmax",
+                "args": [
+                  "loi_nhuan_moi_sp >= 10000"
+                ],
+                "kwargs": {}
+              }
+            },
+            "ref_node": {
+              "id": "n10",
+              "type": "numpy_reduction",
+              "label": "so_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)",
+              "operation": "np.sum(loi_nhuan_moi_sp >= 10000)",
+              "target_var": "so_san_pham",
+              "source_vars": [],
+              "line": 14,
+              "extra": {
+                "func": "np.sum",
+                "args": [
+                  "loi_nhuan_moi_sp >= 10000"
+                ],
+                "kwargs": {}
+              }
+            },
+            "source": "wrong_function"
+          }
+        ],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "algorithm",
+            "severity": "major",
+            "title": "Sai hàm tính đếm – dùng np.argmax thay vì np.sum",
+            "description": "Dùng 'argmax' thay vì 'sum'",
+            "wrong_code": "so_san_pham = np.argmax(loi_nhuan_moi_sp >= 10000)",
+            "correct_code": "so_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)",
+            "explanation": "np.argmax() trả về CHỈ SỐ của phần tử lớn nhất, không phải số lượng phần tử thỏa điều kiện. Để đếm số phần tử True trong mảng boolean, cần dùng np.sum() vì True được coi là 1 và False là 0."
+          }
+        ],
+        "feedback": {
+          "score": 2.24,
+          "grade": "F",
+          "overall_comment": "Cần cải thiện nhiều. Code bài Bài 1: Numpy 01 – Phân tích lợi nhuận bán hàng đạt điểm 2.24/10 (loại F). Có 0 lỗi nghiêm trọng và 1 lỗi lớn. Đề nghị xem lại kiến thức cơ bản và tham khảo reference solution.",
+          "strengths": [
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution"
+          ],
+          "improvements": [
+            "Xem lại việc chọn hàm: Dùng 'argmax' thay vì 'sum'"
+          ],
+          "advice": "Tham khảo hướng dẫn sửa lỗi ở trên và thực hành lại. Nắm vững sự khác biệt giữa các hàm: sum/argmax, mean/sum, v.v.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 88.0%\nSố lỗi: 1 (critical: 0, major: 1, minor: 0)\n\nCác lỗi phát hiện:\n  1. [MAJOR] Dùng 'argmax' thay vì 'sum'",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 1: Numpy 01 – Phân tích lợi nhuận bán hàng\na. Khởi tạo 3 numpy array: gia_ban, chi_phi, so_luong_ban\nb. Tính tong_doanh_thu = gia_ban * so_luong_ban (từng sản phẩm)\nc. Tính tong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban), in format {tong_loi_nhuan*1000:,.0f} VND\nd. Đếm so_san_pham = np.sum(loi_nhuan_moi_sp >= 10000), in số nguyên\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import numpy as np\ngia_ban = np.array([250, 400, 320, 150, 500])\nchi_phi = np.array([180, 290, 250, 90, 370])\nso_luong_ban = np.array([120, 85, 150, 210, 70])\ntong_doanh_thu = gia_ban * so_luong_ban\nprint(f\"Tổng doanh thu cho từng sản phẩm là: {tong_doanh_thu}\")\ntong_loi_nhuan = np.sum((gia_ban - chi_phi) * so_luong_ban)\nprint(f\"Tổng lợi nhuận của công ty là: {tong_loi_nhuan*1000:,.0f} VND\")\nloi_nhuan_moi_sp = (gia_ban - chi_phi) * so_luong_ban\nso_san_pham = np.argmax(loi_nhuan_moi_sp >= 10000)\nprint(f\"Số lượng sản phẩm có lợi nhuận lớn hơn hoặc bằng 10 triệu VNĐ là: {so_san_pham}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 0/1\n        - Độ tương đồng graph ngữ nghĩa: 88.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Lỗi 1: [MAJOR] algorithm – Dùng 'argmax' thay vì 'sum'\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Sai hàm tính đếm – dùng np.argmax thay vì np.sum\n    Code sai : so_san_pham = np.argmax(loi_nhuan_moi_sp >= 10000)\n    Code đúng: so_san_pham = np.sum(loi_nhuan_moi_sp >= 10000)\n    Giải thích: np.argmax() trả về CHỈ SỐ của phần tử lớn nhất, không phải số lượng phần tử thỏa điều kiện. Để đếm số phần tử True trong mảng boolean, cần dùng np.sum() vì True được coi là 1 và False là 0.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 11,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 11
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.88,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 10,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Hoàng Đức Em",
+        "problem_id": "numpy_02",
+        "problem_name": "Numpy 02 – Đánh giá Hiệu suất Kinh doanh",
+        "status": "wrong_answer",
+        "score": 2.7,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 1,
+        "errors": [],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "none",
+            "severity": "none",
+            "title": "Code đúng – không cần sửa",
+            "description": "Không phát hiện lỗi so với reference solution.",
+            "wrong_code": "",
+            "correct_code": "",
+            "explanation": "Code của bạn khớp với yêu cầu bài toán."
+          }
+        ],
+        "feedback": {
+          "score": 2.7,
+          "grade": "F",
+          "overall_comment": "Cần cải thiện nhiều. Code bài Bài 2: Numpy 02 – Đánh giá Hiệu suất Kinh doanh đạt điểm 2.7/10 (loại F). Có 0 lỗi nghiêm trọng và 0 lỗi lớn. Đề nghị xem lại kiến thức cơ bản và tham khảo reference solution.",
+          "strengths": [
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution",
+            "Lựa chọn hàm và phương pháp xử lý dữ liệu phù hợp"
+          ],
+          "improvements": [
+            "Tiếp tục duy trì chất lượng code tốt"
+          ],
+          "advice": "Tiếp tục thực hành và giải thêm bài tập nâng cao.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 0 (critical: 0, major: 0, minor: 0)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 2: Numpy 02 – Đánh giá Hiệu suất Kinh doanh\na. trung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nb. tong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nc. quy_vuot_troi = sales_matrix[sales_matrix > 650]\nd. tang_truong_Q1_Q4 = ((sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0]) * 100\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import numpy as np\nsales_matrix = np.array([[302,635,470,306],[271,220,321,666],[414,530,658,287],[572,299,330,508]])\ntrung_binh_khu_vuc = np.mean(sales_matrix, axis=1)\nprint(f\"Doanh số trung bình mỗi khu vực: {trung_binh_khu_vuc}\")\ntong_doanh_so_quy = np.sum(sales_matrix, axis=0)\nprint(f\"Tổng doanh số theo từng quý: {tong_doanh_so_quy}\")\nquy_vuot_troi = sales_matrix[sales_matrix > 650]\nprint(f\"Các kết quả doanh số vượt mục tiêu 650: {quy_vuot_troi}\")\ntang_truong_Q1_Q4 = (sales_matrix[:,3] - sales_matrix[:,0]) / sales_matrix[:,0] * 100\nprint(f\"Tăng trưởng doanh số từ Q1 đến Q4 của mỗi khu vực (%): {np.round(tang_truong_Q1_Q4, 2)}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 0/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Không phát hiện lỗi.\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Code đúng – không cần sửa\n    Code sai : \n    Code đúng: \n    Giải thích: Code của bạn khớp với yêu cầu bài toán.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 10,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 10
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 9,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Hoàng Đức Em",
+        "problem_id": "pandas_01",
+        "problem_name": "Pandas 01 – Xử lý Dữ liệu đơn hàng",
+        "status": "wrong_answer",
+        "score": 2.2,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 1,
+        "errors": [
+          {
+            "type": "algorithm",
+            "severity": "major",
+            "description": "Dùng 'df_order.sort_values' thay vì 'df_orders.sort_values'",
+            "expected_code": "df_orders.sort_values(...)",
+            "actual_code": "df_order.sort_values(...)",
+            "node": {
+              "id": "n8",
+              "type": "pandas_sort",
+              "label": "df_sorted_orders = df_order.sort_values(by=ThanhTien, ascending=False)",
+              "operation": "df_order.sort_values(by=ThanhTien, ascending=False)",
+              "target_var": "df_sorted_orders",
+              "source_vars": [],
+              "line": 8,
+              "extra": {
+                "func": "df_order.sort_values",
+                "args": [],
+                "kwargs": {
+                  "by": "ThanhTien",
+                  "ascending": false
+                }
+              }
+            },
+            "ref_node": {
+              "id": "n8",
+              "type": "pandas_sort",
+              "label": "df_sorted_orders = df_orders.sort_values(by=ThanhTien, ascending=False)",
+              "operation": "df_orders.sort_values(by=ThanhTien, ascending=False)",
+              "target_var": "df_sorted_orders",
+              "source_vars": [],
+              "line": 17,
+              "extra": {
+                "func": "df_orders.sort_values",
+                "args": [],
+                "kwargs": {
+                  "by": "ThanhTien",
+                  "ascending": false
+                }
+              }
+            },
+            "source": "wrong_function"
+          }
+        ],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "algorithm",
+            "severity": "major",
+            "title": "Lỗi cần sửa",
+            "description": "Dùng 'df_order.sort_values' thay vì 'df_orders.sort_values'",
+            "wrong_code": "df_sorted_orders = df_order.sort_values(by='ThanhTien', ascending=False)",
+            "correct_code": "df_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)",
+            "explanation": "Kiểm tra lại đoạn code này theo hướng dẫn."
+          }
+        ],
+        "feedback": {
+          "score": 2.2,
+          "grade": "F",
+          "overall_comment": "Cần cải thiện nhiều. Code bài Bài 3: Pandas 01 – Xử lý Dữ liệu đơn hàng đạt điểm 2.2/10 (loại F). Có 0 lỗi nghiêm trọng và 1 lỗi lớn. Đề nghị xem lại kiến thức cơ bản và tham khảo reference solution.",
+          "strengths": [
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution"
+          ],
+          "improvements": [
+            "Xem lại việc chọn hàm: Dùng 'df_order.sort_values' thay vì 'df_orders.sort_values'"
+          ],
+          "advice": "Tham khảo hướng dẫn sửa lỗi ở trên và thực hành lại. Nắm vững sự khác biệt giữa các hàm: sum/argmax, mean/sum, v.v.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 86.2%\nSố lỗi: 1 (critical: 0, major: 1, minor: 0)\n\nCác lỗi phát hiện:\n  1. [MAJOR] Dùng 'df_order.sort_values' thay vì 'df_orders.sort_values'",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 3: Pandas 01 – Xử lý Dữ liệu đơn hàng\na. Tạo DataFrame df_orders từ dict order_data\nb. df_orders['DonGia'] = [18000, 500, 350, 4500, 19500]\nc. Tính df_orders['ThanhTien'] = SoLuong * DonGia, sắp xếp giảm dần theo ThanhTien\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import pandas as pd\norder_data = {'MaDonHang':['DH001','DH002','DH003','DH004','DH005'],'TenSanPham':['Laptop','Bàn phím','Chuột','Màn hình','Laptop'],'SoLuong':[5,10,15,8,3],'DanhGia':[4.5,4.0,5.0,4.2,4.8]}\ndf_order = pd.DataFrame(order_data)\nprint(f\"DataFrame ban đầu:\\n{df_order}\")\ndf_order['DonGia'] = [18000, 500, 350, 4500, 19500]\nprint(f\"DataFrame sau khi thêm đơn giá:\\n{df_order}\")\ndf_order['ThanhTien'] = df_order['SoLuong'] * df_order['DonGia']\ndf_sorted_orders = df_order.sort_values(by='ThanhTien', ascending=False)\nprint(f\"DataFrame sau khi sắp xếp theo thành tiền:\\n{df_sorted_orders}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 0/1\n        - Độ tương đồng graph ngữ nghĩa: 86.2%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Lỗi 1: [MAJOR] algorithm – Dùng 'df_order.sort_values' thay vì 'df_orders.sort_values'\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Lỗi cần sửa\n    Code sai : df_sorted_orders = df_order.sort_values(by='ThanhTien', ascending=False)\n    Code đúng: df_sorted_orders = df_orders.sort_values(by='ThanhTien', ascending=False)\n    Giải thích: Kiểm tra lại đoạn code này theo hướng dẫn.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 9,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 9
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.8625,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 8,
+          "matched_count": 0
+        }
+      },
+      {
+        "student_name": "Hoàng Đức Em",
+        "problem_id": "pandas_02",
+        "problem_name": "Pandas 02 – Phân tích dữ liệu nhân sự",
+        "status": "wrong_answer",
+        "score": 2.29,
+        "grade": "F",
+        "passed_tests": 0,
+        "total_tests": 1,
+        "errors": [
+          {
+            "type": "data_handling",
+            "severity": "major",
+            "description": "Sai tên phòng ban: 'KinhDoanh' cần phải là 'Kinh doanh' (có dấu cách và dấu thanh)",
+            "expected_code": "df_employees['PhongBan'] == 'Kinh doanh'",
+            "actual_code": "df_employees['PhongBan'] == 'KinhDoanh'",
+            "node": {},
+            "ref_node": {},
+            "source": "wrong_column_value"
+          }
+        ],
+        "repair_steps": [
+          {
+            "step_number": 1,
+            "error_type": "data_handling",
+            "severity": "major",
+            "title": "Sai tên phòng ban – 'KinhDoanh' thay vì 'Kinh doanh'",
+            "description": "Sai tên phòng ban: 'KinhDoanh' cần phải là 'Kinh doanh' (có dấu cách và dấu thanh)",
+            "wrong_code": "df_employees['PhongBan'] == 'KinhDoanh'",
+            "correct_code": "df_employees['PhongBan'] == 'Kinh doanh'",
+            "explanation": "Tên phòng ban trong DataFrame là 'Kinh doanh' (có dấu cách và dấu tiếng Việt). Dùng 'KinhDoanh' sẽ không khớp với dữ liệu, kết quả lọc sẽ trả về 0 hàng."
+          }
+        ],
+        "feedback": {
+          "score": 2.29,
+          "grade": "F",
+          "overall_comment": "Cần cải thiện nhiều. Code bài Bài 4: Pandas 02 – Phân tích dữ liệu nhân sự đạt điểm 2.29/10 (loại F). Có 0 lỗi nghiêm trọng và 1 lỗi lớn. Đề nghị xem lại kiến thức cơ bản và tham khảo reference solution.",
+          "strengths": [
+            "Code không có lỗi cú pháp, có thể chạy được",
+            "Cấu trúc code khá tương đồng với reference solution"
+          ],
+          "improvements": [
+            "Xem lại cách xử lý dữ liệu: Sai tên phòng ban: 'KinhDoanh' cần phải là 'Kinh doanh' (có dấu cách và dấu thanh)"
+          ],
+          "advice": "Tham khảo hướng dẫn sửa lỗi ở trên và thực hành lại.",
+          "feedback_detail": "=== PHÂN TÍCH CHI TIẾT ===\n\nĐiểm tương đồng graph: 90.0%\nSố lỗi: 1 (critical: 0, major: 1, minor: 0)\n\nCác lỗi phát hiện:\n  1. [MAJOR] Sai tên phòng ban: 'KinhDoanh' cần phải là 'Kinh doanh' (có dấu cách và dấu thanh)",
+          "llm_prompt": "        Bạn là trợ lý chấm điểm tự động cho môn Lập trình Python.\n        Nhiệm vụ: Đánh giá code sinh viên, cho điểm và tạo phản hồi chi tiết bằng tiếng Việt.\n\n        ═══════════════════════════════════════════════════════════\n        ĐỀ BÀI:\n        Bài 4: Pandas 02 – Phân tích dữ liệu nhân sự\na. Tạo DataFrame df_employees từ employee_data\nb. so_nv_kinh_nghiem = df_employees[NamKinhNghiem > 3].shape[0]\nc. so_nv_luong_cao = df_employees[(PhongBan == 'Kinh doanh') & (LuongThang * 12 > 250)].shape[0]\n\n        ═══════════════════════════════════════════════════════════\n        CODE SINH VIÊN:\n        ```python\n        import pandas as pd\nemployee_data = {'Ten':['Anh','Bình','Hương','Khang','Lan','Minh'],'PhongBan':['Nhân sự','Kinh doanh','Marketing','Kinh doanh','Marketing','Nhân sự'],'NamKinhNghiem':[3,5,2,5,4,3],'LuongThang':[15,22,18,24,20,16]}\ndf_employees = pd.DataFrame(employee_data)\nprint(f\"DataFrame dữ liệu nhân sự:\\n{df_employees}\")\nso_nv_kinh_nghiem = df_employees[df_employees['NamKinhNghiem'] > 3].shape[0]\nprint(f\"Số nhân viên có hơn 3 năm kinh nghiệm: {so_nv_kinh_nghiem}\")\nso_nv_luong_cao = df_employees[(df_employees['PhongBan'] == 'KinhDoanh') & (df_employees['LuongThang'] * 12 > 250)].shape[0]\nprint(f\"Số nhân viên phòng Kinh doanh có lương năm > 250 triệu: {so_nv_luong_cao}\")\n        ```\n        ═══════════════════════════════════════════════════════════\n        KẾT QUẢ KIỂM TRA TỰ ĐỘNG:\n        - Test cases vượt qua: 0/1\n        - Độ tương đồng graph ngữ nghĩa: 90.0%\n        ═══════════════════════════════════════════════════════════\n        LỖI PHÁT HIỆN (từ phân tích đồ thị):\n          Lỗi 1: [MAJOR] data_handling – Sai tên phòng ban: 'KinhDoanh' cần phải là 'Kinh doanh' (có dấu cách và dấu thanh)\n\n        ═══════════════════════════════════════════════════════════\n        HƯỚNG DẪN SỬA LỖI:\n          Bước 1: Sai tên phòng ban – 'KinhDoanh' thay vì 'Kinh doanh'\n    Code sai : df_employees['PhongBan'] == 'KinhDoanh'\n    Code đúng: df_employees['PhongBan'] == 'Kinh doanh'\n    Giải thích: Tên phòng ban trong DataFrame là 'Kinh doanh' (có dấu cách và dấu tiếng Việt). Dùng 'KinhDoanh' sẽ không khớp với dữ liệu, kết quả lọc sẽ trả về 0 hàng.\n\n\n        ═══════════════════════════════════════════════════════════\n        YÊU CẦU:\n        1. Cho điểm từ 0 đến 10 (70% dựa trên test cases, 30% dựa trên chất lượng code).\n        2. Viết nhận xét tổng quan (3-5 câu).\n        3. Liệt kê điểm mạnh của sinh viên.\n        4. Liệt kê điểm cần cải thiện.\n        5. Lời khuyên cụ thể để cải thiện kỹ năng.\n\n        Trả lời theo định dạng JSON:\n        {\n          \"score\": <số>,\n          \"grade\": \"<A/B/C/D/F>\",\n          \"overall_comment\": \"<nhận xét tổng quan>\",\n          \"strengths\": [\"<điểm mạnh 1>\", ...],\n          \"improvements\": [\"<điểm cần cải thiện 1>\", ...],\n          \"advice\": \"<lời khuyên>\",\n          \"feedback_detail\": \"<phân tích chi tiết>\"\n        }\n"
+        },
+        "graph": {
+          "student": {
+            "node_count": 8,
+            "has_syntax_error": false
+          },
+          "reference": {
+            "node_count": 8
+          }
+        },
+        "graph_diff": {
+          "similarity_score": 0.9,
+          "missing_count": 0,
+          "extra_count": 0,
+          "wrong_count": 7,
+          "matched_count": 0
+        }
+      }
+    ]
+  }
+]
