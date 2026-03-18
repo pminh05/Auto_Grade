@@ -130,6 +130,10 @@ _REPAIR_TEMPLATES: dict[str, dict] = {
 }
 
 
+_TMPL_KINHD = "wrong_column_value_KinhDoanh"
+_TMPL_KINHN = "wrong_column_KinhNghiem"
+
+
 def _pick_template(error: dict) -> dict:
     """Chọn template phù hợp nhất cho lỗi."""
     source = error.get("source", "")
@@ -155,9 +159,9 @@ def _pick_template(error: dict) -> dict:
 
     if source == "wrong_column_value":
         if "kinhdoanh" in actual.lower() or "kinhdoanh" in desc:
-            return _REPAIR_TEMPLATES["wrong_column_value_KinhDoanh"]
+            return _REPAIR_TEMPLATES[_TMPL_KINHD]
         if "kinhnghiem" in actual.lower() and "nam" not in actual.lower():
-            return _REPAIR_TEMPLATES["wrong_column_KinhNghiem"]
+            return _REPAIR_TEMPLATES[_TMPL_KINHN]
 
     if source == "wrong_filter":
         if ">= 3" in desc or ">=3" in actual:
@@ -177,7 +181,7 @@ def _pick_template(error: dict) -> dict:
         return _REPAIR_TEMPLATES["wrong_arithmetic_operator"]
 
     if "kinhdoanh" in desc:
-        return _REPAIR_TEMPLATES["wrong_column_value_KinhDoanh"]
+        return _REPAIR_TEMPLATES[_TMPL_KINHD]
 
     if "argmax" in desc or "argmax" in actual:
         return _REPAIR_TEMPLATES["wrong_function_argmax_sum"]
